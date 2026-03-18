@@ -17,7 +17,7 @@ body {
 }
 
 /* Typography & Colors */
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-weight: 600;
     letter-spacing: 1px;
 }
@@ -94,7 +94,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0 10%;
-    padding-top: 80px; /* offset for nav */
+    padding-top: 80px;
 }
 
 .hero-text {
@@ -146,6 +146,12 @@ nav {
     text-transform: uppercase;
 }
 
+.subtitle {
+    color: #a8a8a8;
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
 .underline {
     height: 3px;
     width: 60px;
@@ -185,6 +191,86 @@ nav {
 .service-card p {
     color: #a8a8a8;
     font-size: 0.95rem;
+}
+
+/* Pricing Grid */
+.pricing {
+    background-color: #141414; /* Slightly different background to separate sections */
+}
+
+.pricing-category h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.pricing-card {
+    background-color: #0f0f0f;
+    padding: 40px 30px;
+    border-radius: 12px;
+    border-top: 4px solid #333;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.pricing-card.premium {
+    border-top: 4px solid #fff; /* Highlights the hybrid package */
+    transform: scale(1.02);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    border-top-color: #fff;
+}
+
+.pricing-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.pricing-card .duration, .pricing-card .desc {
+    color: #a8a8a8;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    min-height: 40px; /* Aligns cards evenly */
+}
+
+.pricing-card .rate {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.pricing-card ul {
+    list-style: none;
+    text-align: left;
+    border-top: 1px solid #222;
+    padding-top: 25px;
+}
+
+.pricing-card ul li {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #ddd;
+    display: flex;
+    align-items: center;
+}
+
+.pricing-card ul li i {
+    color: #a8a8a8;
+    margin-right: 12px;
+    font-size: 1rem;
 }
 
 /* Contact Section */
@@ -277,7 +363,7 @@ footer {
     }
     
     .nav-links {
-        display: none; /* Can be toggled with JS for mobile menu */
+        display: none; 
     }
     
     .hamburger {
@@ -287,5 +373,9 @@ footer {
     .contact-info {
         flex-direction: column;
         gap: 20px;
+    }
+    
+    .pricing-card.premium {
+        transform: scale(1);
     }
 }
